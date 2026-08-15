@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO & Meta -->
+  <title>Zeyad & Hamsa - Engagement Invitation</title>
+  <meta name="description" content="دعوة لحضور حفل خطوبة Zeyad & Hamsa يوم السبت 20 يوليو 2026 في Elena Hall" />
+  <meta name="author" content="Zeyad & Hamsa" />
+  <meta name="keywords" content="engagement, invitation, Hamsa, Zeyad, Elena Hall, Cairo" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Zeyad & Hamsa - Engagement Invitation" />
+  <meta property="og:description" content="دعوة لحضور حفل خطوبة Zeyad & Hamsa يوم السبت 20 يوليو 2026 في Elena Hall" />
+  <meta property="og:image" content="og-image.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Amiri:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       AUDIO ELEMENT
+  ============================================================ -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ============================================================
+       FLOATING PETALS CANVAS
+  ============================================================ -->
+  <canvas id="petalsCanvas"></canvas>
+
+  <!-- ============================================================
+       SECTION 1 — HERO / ENVELOPE
+  ============================================================ -->
+  <section id="hero" class="hero-section">
+    <div class="hero-inner">
+      <!-- Decorative ornament top -->
+      <div class="ornament ornament-top">
+        <svg viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g fill="none" stroke="#c8a96e" stroke-width="0.8" opacity="0.85">
+            <line x1="0" y1="40" x2="150" y2="40" />
+            <line x1="250" y1="40" x2="400" y2="40" />
+            <path d="M150,40 Q175,10 200,40 Q225,70 250,40" />
+            <circle cx="200" cy="40" r="5" fill="#c8a96e" />
+            <circle cx="185" cy="40" r="2.5" fill="#c8a96e" />
+            <circle cx="215" cy="40" r="2.5" fill="#c8a96e" />
+            <circle cx="170" cy="40" r="1.5" fill="#c8a96e" />
+            <circle cx="230" cy="40" r="1.5" fill="#c8a96e" />
+          </g>
+        </svg>
+      </div>
+
+      <p class="hero-subtitle">You are cordially invited to the engagement of</p>
+
+      <h1 class="hero-names">
+        <span class="name-groom">Zeyad</span>
+        <span class="name-ampersand">&amp;</span>
+        <span class="name-bride">Hamsa</span>
+      </h1>
+
+      <!-- Decorative ornament bottom -->
+      <div class="ornament ornament-bottom">
+        <svg viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g fill="none" stroke="#c8a96e" stroke-width="0.8" opacity="0.85">
+            <line x1="0" y1="40" x2="150" y2="40" />
+            <line x1="250" y1="40" x2="400" y2="40" />
+            <path d="M150,40 Q175,10 200,40 Q225,70 250,40" />
+            <circle cx="200" cy="40" r="5" fill="#c8a96e" />
+            <circle cx="185" cy="40" r="2.5" fill="#c8a96e" />
+            <circle cx="215" cy="40" r="2.5" fill="#c8a96e" />
+            <circle cx="170" cy="40" r="1.5" fill="#c8a96e" />
+            <circle cx="230" cy="40" r="1.5" fill="#c8a96e" />
+          </g>
+        </svg>
+      </div>
+
+      <button id="openInvitationBtn" class="btn-open-invitation" aria-label="Open Invitation">
+        <span class="btn-text">Open Invitation</span>
+        <span class="btn-icon">✦</span>
+      </button>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-hint-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT (revealed after button click)
+  ============================================================ -->
+  <main id="mainContent" class="main-content hidden" aria-live="polite">
+
+    <!-- ===================== QURAN VERSE ===================== -->
+    <section id="verse" class="verse-section" aria-label="Quran Verse">
+      <div class="section-inner">
+        <div class="verse-ornament" aria-hidden="true">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+            <g fill="#c8a96e" opacity="0.9">
+              <polygon points="30,2 34,22 54,22 38,34 44,54 30,42 16,54 22,34 6,22 26,22" opacity="0.3" />
+              <circle cx="30" cy="30" r="10" fill="none" stroke="#c8a96e" stroke-width="1" />
+              <circle cx="30" cy="30" r="4" fill="#c8a96e" />
+            </g>
+          </svg>
+        </div>
+        <blockquote class="verse-text" lang="ar" dir="rtl">
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم
+          مَّوَدَّةً وَرَحْمَةً
+        </blockquote>
+        <cite class="verse-source" lang="ar" dir="rtl">سورة الروم [30:21]</cite>
+      </div>
+    </section>
+
+    <!-- ===================== COUPLE PORTRAIT ===================== -->
+    <section id="portrait" class="portrait-section" aria-label="Couple Portrait">
+      <div class="section-inner">
+        <div class="portrait-frame-wrapper">
+          <div class="portrait-frame">
+            <div class="frame-corner frame-corner--tl" aria-hidden="true"></div>
+            <div class="frame-corner frame-corner--tr" aria-hidden="true"></div>
+            <div class="frame-corner frame-corner--bl" aria-hidden="true"></div>
+            <div class="frame-corner frame-corner--br" aria-hidden="true"></div>
+            <img src="couple.png" alt="Zeyad and Hamsa - Engagement Portrait" class="portrait-img" loading="lazy" />
+          </div>
+        </div>
+        <div class="portrait-caption">
+          <span class="portrait-name">Zeyad</span>
+          <span class="portrait-amp">&amp;</span>
+          <span class="portrait-name">Hamsa</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SAVE THE DATE ===================== -->
+    <section id="savethedate" class="savethedate-section" aria-label="Save The Date">
+      <div class="section-inner">
+        <p class="section-tag">— Save The Date —</p>
+        <p class="std-wedding-of">The engagement of</p>
+        <h2 class="std-names">Zeyad <span class="std-amp">&amp;</span> Hamsa</h2>
+
+        <div class="std-date-block" role="time" datetime="2026-07-20T20:00">
+          <div class="std-date-part">
+            <span class="std-date-label">Saturday</span>
+          </div>
+          <div class="std-date-divider" aria-hidden="true">|</div>
+          <div class="std-date-part">
+            <span class="std-date-number">20</span>
+          </div>
+          <div class="std-date-divider" aria-hidden="true">|</div>
+          <div class="std-date-part">
+            <span class="std-date-label">July</span>
+          </div>
+        </div>
+
+        <p class="std-year">Two Thousand Twenty Six</p>
+        <p class="std-time">at Eight O'Clock in the Evening</p>
+
+        <div class="std-ornament-line" aria-hidden="true">
+          <span class="ornament-line-inner"></span>
+          <span class="ornament-diamond">◆</span>
+          <span class="ornament-line-inner"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COUNTDOWN TIMER ===================== -->
+    <section id="countdown" class="countdown-section" aria-label="Countdown Timer">
+      <div class="section-inner">
+        <p class="countdown-title">Countdown to our big day</p>
+
+        <div class="countdown-grid" id="countdownGrid" role="timer"
+          aria-label="Days, Hours, Minutes, Seconds remaining">
+          <div class="countdown-item">
+            <span class="countdown-number" id="cdDays">000</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-sep" aria-hidden="true">:</div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="cdHours">00</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-sep" aria-hidden="true">:</div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="cdMinutes">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-sep" aria-hidden="true">:</div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="cdSeconds">00</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+
+        <!-- Past date message -->
+        <p class="countdown-past hidden" id="countdownPast">
+          ✦ We are engaged! Thank you for celebrating with us ✦
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== VENUE ===================== -->
+    <section id="venue" class="venue-section" aria-label="Venue Details">
+      <div class="section-inner">
+        <p class="section-tag">— Venue —</p>
+
+        <div class="venue-icon" aria-hidden="true">
+          <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg" width="50">
+            <g fill="none" stroke="#c8a96e" stroke-width="1.5">
+              <!-- building -->
+              <rect x="5" y="30" width="50" height="45" rx="2" />
+              <!-- dome -->
+              <path d="M5,30 Q5,5 30,5 Q55,5 55,30" />
+              <!-- door -->
+              <path d="M22,75 L22,55 Q22,48 30,48 Q38,48 38,55 L38,75" />
+              <!-- windows -->
+              <rect x="10" y="38" width="10" height="10" rx="1" />
+              <rect x="40" y="38" width="10" height="10" rx="1" />
+              <!-- minaret hint lines -->
+              <line x1="30" y1="5" x2="30" y2="0" />
+              <circle cx="30" cy="0" r="2" fill="#c8a96e" />
+            </g>
+          </svg>
+        </div>
+
+        <h2 class="venue-name">Elena Hall Grand Ballroom</h2>
+        <p class="venue-address">123 Nile Corniche Road, Maadi, Cairo, Egypt</p>
+
+        <a id="getDirectionsBtn" href="https://www.google.com/maps/search/123+Nile+Corniche+Road+Maadi+Cairo+Egypt"
+          target="_blank" rel="noopener noreferrer" class="btn-directions"
+          aria-label="Get Directions to Elena Hall on Google Maps">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"
+            aria-hidden="true">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" />
+          </svg>
+          Get Directions
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer id="footer" class="footer-section" role="contentinfo">
+      <div class="footer-ornament" aria-hidden="true">
+        <svg viewBox="0 0 300 40" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#c8a96e" stroke-width="0.6" opacity="0.7">
+            <line x1="0" y1="20" x2="110" y2="20" />
+            <line x1="190" y1="20" x2="300" y2="20" />
+            <path d="M110,20 Q125,5 150,20 Q175,35 190,20" />
+            <circle cx="150" cy="20" r="3" fill="#c8a96e" />
+          </g>
+        </svg>
+      </div>
+      <p class="footer-text">© 2026 Zeyad &amp; Hamsa. Created with love.</p>
+      <div class="footer-hearts" aria-hidden="true">♥</div>
+    </footer>
+
+  </main>
+
+  <!-- Music toggle button (fixed, visible after open) -->
+  <button id="musicToggleBtn" class="music-toggle hidden" aria-label="Toggle background music" title="Toggle Music">
+    <span id="musicIcon">♫</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
