@@ -2,33 +2,31 @@
    DESIGN TOKENS
    =================================================== */
 :root {
-  --clr-ivory: #fffce5;
-  --clr-ivory-dark: #faf5d6;
-  --clr-gold: #78808a;
-  --clr-gold-light: #fbf8e0;
-  --clr-gold-dark: #545960;
-  --clr-brown: #272a2e;
-  --clr-cream: #fffde0;
-  --clr-text: #2b2e33;
-  --clr-text-light: #636973;
-  --clr-bg-dark: #1c1f24;
+  --clr-ivory:       #ffffff;
+  --clr-ivory-dark:  #f8f7f5;
+  --clr-gold:        #78808a;
+  --clr-gold-light:  #d8dce2;
+  --clr-gold-dark:   #545960;
+  --clr-brown:       #272a2e;
+  --clr-cream:       #fcfbfa;
+  --clr-text:        #2b2e33;
+  --clr-text-light:  #636973;
+  --clr-bg-dark:     #1c1f24;
 
-  --ff-serif: 'Cormorant Garamond', 'Georgia', serif;
-  --ff-script: 'Great Vibes', cursive;
-  --ff-sans: 'Lato', sans-serif;
-  --ff-arabic: 'Amiri', serif;
+  --ff-serif:        'Cormorant Garamond', 'Georgia', serif;
+  --ff-script:       'Great Vibes', cursive;
+  --ff-sans:         'Lato', sans-serif;
+  --ff-arabic:       'Amiri', serif;
 
-  --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-gold: 0 4px 30px rgba(120, 128, 138, 0.15);
-  --shadow-soft: 0 8px 40px rgba(44, 48, 54, 0.05);
+  --transition:      0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-gold:     0 4px 30px rgba(120, 128, 138, 0.15);
+  --shadow-soft:     0 8px 40px rgba(44, 48, 54, 0.05);
 }
 
 /* ===================================================
    RESET & BASE
    =================================================== */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -58,16 +56,13 @@ body.invitation-opened {
    =================================================== */
 #petalsCanvas {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   pointer-events: none;
   z-index: 0;
   opacity: 0;
   transition: opacity 1.5s ease;
 }
-
 #petalsCanvas.active {
   opacity: 1;
 }
@@ -88,7 +83,7 @@ body.invitation-opened {
   background:
     radial-gradient(ellipse at 30% 20%, rgba(120, 128, 138, 0.08) 0%, transparent 60%),
     radial-gradient(ellipse at 70% 80%, rgba(120, 128, 138, 0.06) 0%, transparent 60%),
-    linear-gradient(160deg, #fffce2 0%, #f6f5f2 50%, #fbf9de 100%);
+    linear-gradient(160deg, #ffffff 0%, #f6f5f2 50%, #fcfbfa 100%);
   overflow: hidden;
   padding: 2rem;
   transition: opacity 1s ease, transform 1s ease;
@@ -224,13 +219,8 @@ body.invitation-opened {
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 /* Scroll hint */
@@ -250,19 +240,8 @@ body.invitation-opened {
 }
 
 @keyframes scrollPulse {
-
-  0%,
-  100% {
-    opacity: 0;
-    transform: scaleY(0);
-    transform-origin: top;
-  }
-
-  50% {
-    opacity: 1;
-    transform: scaleY(1);
-    transform-origin: top;
-  }
+  0%, 100% { opacity: 0; transform: scaleY(0); transform-origin: top; }
+  50%       { opacity: 1; transform: scaleY(1); transform-origin: top; }
 }
 
 /* ===================================================
@@ -283,15 +262,8 @@ body.invitation-opened {
 }
 
 @keyframes slideUpReveal {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ===================================================
@@ -326,9 +298,7 @@ body.invitation-opened {
 .verse-section::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   height: 4px;
   background: linear-gradient(90deg, transparent, var(--clr-gold), transparent);
 }
@@ -393,30 +363,10 @@ body.invitation-opened {
   border-color: var(--clr-gold);
   border-style: solid;
 }
-
-.frame-corner--tl {
-  top: 4px;
-  left: 4px;
-  border-width: 2px 0 0 2px;
-}
-
-.frame-corner--tr {
-  top: 4px;
-  right: 4px;
-  border-width: 2px 2px 0 0;
-}
-
-.frame-corner--bl {
-  bottom: 4px;
-  left: 4px;
-  border-width: 0 0 2px 2px;
-}
-
-.frame-corner--br {
-  bottom: 4px;
-  right: 4px;
-  border-width: 0 2px 2px 0;
-}
+.frame-corner--tl { top: 4px; left: 4px;  border-width: 2px 0 0 2px; }
+.frame-corner--tr { top: 4px; right: 4px; border-width: 2px 2px 0 0; }
+.frame-corner--bl { bottom: 4px; left: 4px;  border-width: 0 0 2px 2px; }
+.frame-corner--br { bottom: 4px; right: 4px; border-width: 0 2px 2px 0; }
 
 .portrait-img {
   display: block;
@@ -456,19 +406,12 @@ body.invitation-opened {
 .savethedate-section::after {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 0; right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--clr-gold), transparent);
 }
-
-.savethedate-section::before {
-  top: 0;
-}
-
-.savethedate-section::after {
-  bottom: 0;
-}
+.savethedate-section::before { top: 0; }
+.savethedate-section::after  { bottom: 0; }
 
 .std-wedding-of {
   font-family: var(--ff-sans);
@@ -635,15 +578,8 @@ body.invitation-opened {
 }
 
 @keyframes numberFlip {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0%   { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .countdown-label {
@@ -766,15 +702,8 @@ body.invitation-opened {
 }
 
 @keyframes heartbeat {
-
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.2); }
 }
 
 /* ===================================================
@@ -795,7 +724,7 @@ body.invitation-opened {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   transition: transform 0.2s ease, background 0.2s ease;
   z-index: 1000;
 }
@@ -813,25 +742,13 @@ body.invitation-opened {
    ANIMATIONS & SCROLL REVEAL
    =================================================== */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* Intersection observer targets */
