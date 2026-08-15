@@ -121,9 +121,8 @@
      COUNTDOWN TIMER
   ------------------------------------------------------- */
   function initCountdown() {
-    // Target: 20 July 2026 at 20:00 Cairo time (UTC+2 in July = UTC+2/3)
-    // Using Egypt Standard Time (EET = UTC+2, no DST)
-    const targetDate = new Date('2026-07-20T20:00:00+02:00').getTime();
+    // Target: 11 September 2026 at 17:00 Cairo time
+    const targetDate = new Date('2026-09-11T17:00:00+03:00').getTime();
 
     const daysEl    = document.getElementById('cdDays');
     const hoursEl   = document.getElementById('cdHours');
@@ -233,13 +232,13 @@
     resize();
     window.addEventListener('resize', resize);
 
-    // Petal colors
+    // Petal / Sparkle colors (silver, light gray & pearl)
     const petalColors = [
-      'rgba(200, 169, 110, 0.6)',
-      'rgba(230, 200, 150, 0.5)',
-      'rgba(255, 230, 180, 0.4)',
-      'rgba(245, 215, 160, 0.55)',
-      'rgba(240, 220, 185, 0.45)',
+      'rgba(175, 182, 192, 0.6)',
+      'rgba(205, 211, 219, 0.5)',
+      'rgba(240, 242, 245, 0.55)',
+      'rgba(140, 147, 156, 0.45)',
+      'rgba(220, 224, 230, 0.5)',
     ];
 
     const petals = [];
