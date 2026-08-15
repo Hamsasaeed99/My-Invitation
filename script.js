@@ -232,13 +232,13 @@
     resize();
     window.addEventListener('resize', resize);
 
-    // Petal / Sparkle colors (silver, light gray & pearl)
+    // Petal colors
     const petalColors = [
-      'rgba(175, 182, 192, 0.6)',
-      'rgba(205, 211, 219, 0.5)',
-      'rgba(240, 242, 245, 0.55)',
-      'rgba(140, 147, 156, 0.45)',
-      'rgba(220, 224, 230, 0.5)',
+      'rgba(200, 169, 110, 0.6)',
+      'rgba(230, 200, 150, 0.5)',
+      'rgba(255, 230, 180, 0.4)',
+      'rgba(245, 215, 160, 0.55)',
+      'rgba(240, 220, 185, 0.45)',
     ];
 
     const petals = [];
