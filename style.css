@@ -2,16 +2,16 @@
    DESIGN TOKENS
    =================================================== */
 :root {
-  --clr-ivory:       #ffffff;
-  --clr-ivory-dark:  #f8f7f5;
-  --clr-gold:        #78808a;
-  --clr-gold-light:  #d8dce2;
-  --clr-gold-dark:   #545960;
-  --clr-brown:       #272a2e;
-  --clr-cream:       #fcfbfa;
-  --clr-text:        #2b2e33;
-  --clr-text-light:  #636973;
-  --clr-bg-dark:     #1c1f24;
+  --clr-ivory:       #faf6ef;
+  --clr-ivory-dark:  #f3ead7;
+  --clr-gold:        #c8a96e;
+  --clr-gold-light:  #e2c98a;
+  --clr-gold-dark:   #9a7a40;
+  --clr-brown:       #5c4a2a;
+  --clr-cream:       #f9f4eb;
+  --clr-text:        #3d2e14;
+  --clr-text-light:  #7a6240;
+  --clr-bg-dark:     #1a1209;
 
   --ff-serif:        'Cormorant Garamond', 'Georgia', serif;
   --ff-script:       'Great Vibes', cursive;
@@ -19,8 +19,8 @@
   --ff-arabic:       'Amiri', serif;
 
   --transition:      0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-gold:     0 4px 30px rgba(120, 128, 138, 0.15);
-  --shadow-soft:     0 8px 40px rgba(44, 48, 54, 0.05);
+  --shadow-gold:     0 4px 30px rgba(200, 169, 110, 0.2);
+  --shadow-soft:     0 8px 40px rgba(61, 46, 20, 0.08);
 }
 
 /* ===================================================
@@ -81,9 +81,9 @@ body.invitation-opened {
   align-items: center;
   justify-content: center;
   background:
-    radial-gradient(ellipse at 30% 20%, rgba(120, 128, 138, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 80%, rgba(120, 128, 138, 0.06) 0%, transparent 60%),
-    linear-gradient(160deg, #ffffff 0%, #f6f5f2 50%, #fcfbfa 100%);
+    radial-gradient(ellipse at 30% 20%, rgba(200, 169, 110, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(200, 169, 110, 0.10) 0%, transparent 60%),
+    linear-gradient(160deg, #fdf9f1 0%, #f5ecda 50%, #faf6ef 100%);
   overflow: hidden;
   padding: 2rem;
   transition: opacity 1s ease, transform 1s ease;
@@ -104,7 +104,7 @@ body.invitation-opened {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%2378808a' stroke-width='0.3' opacity='0.18'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z'/%3E%3Cpath d='M30 10 L50 30 L30 50 L10 30 Z'/%3E%3Ccircle cx='30' cy='30' r='8'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%23c8a96e' stroke-width='0.3' opacity='0.18'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z'/%3E%3Cpath d='M30 10 L50 30 L30 50 L10 30 Z'/%3E%3Ccircle cx='30' cy='30' r='8'/%3E%3C/g%3E%3C/svg%3E");
   pointer-events: none;
 }
 
@@ -397,7 +397,7 @@ body.invitation-opened {
 .savethedate-section {
   padding: 6rem 1.5rem;
   background:
-    radial-gradient(ellipse at center, rgba(120, 128, 138, 0.05) 0%, transparent 70%),
+    radial-gradient(ellipse at center, rgba(200, 169, 110, 0.08) 0%, transparent 70%),
     linear-gradient(180deg, var(--clr-ivory-dark) 0%, var(--clr-cream) 100%);
   position: relative;
 }
@@ -522,7 +522,7 @@ body.invitation-opened {
 .countdown-section {
   padding: 6rem 1.5rem;
   background:
-    linear-gradient(135deg, #1c1f24 0%, #282c34 50%, #1c1f24 100%);
+    linear-gradient(135deg, #1a1209 0%, #2d1f0a 50%, #1a1209 100%);
   position: relative;
   overflow: hidden;
 }
@@ -531,7 +531,7 @@ body.invitation-opened {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%2378808a' stroke-width='0.4' opacity='0.12'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z'/%3E%3Ccircle cx='40' cy='40' r='15'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23c8a96e' stroke-width='0.4' opacity='0.12'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z'/%3E%3Ccircle cx='40' cy='40' r='15'/%3E%3C/g%3E%3C/svg%3E");
   pointer-events: none;
 }
 
@@ -674,9 +674,9 @@ body.invitation-opened {
    =================================================== */
 .footer-section {
   padding: 3rem 1.5rem;
-  background: linear-gradient(180deg, var(--clr-ivory-dark) 0%, #f2f0ec 100%);
+  background: linear-gradient(180deg, var(--clr-ivory-dark) 0%, #ede3ca 100%);
   text-align: center;
-  border-top: 1px solid rgba(120, 128, 138, 0.2);
+  border-top: 1px solid rgba(200, 169, 110, 0.3);
 }
 
 .footer-ornament {
