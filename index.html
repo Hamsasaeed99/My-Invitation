@@ -7,13 +7,14 @@
 
   <!-- SEO & Meta -->
   <title>Zeyad & Hamsa - Engagement Invitation</title>
-  <meta name="description" content="دعوة لحضور حفل خطوبة Zeyad & Hamsa يوم السبت 20 يوليو 2026 في Elena Hall" />
+  <meta name="description" content="دعوة لحضور حفل خطوبة Zeyad & Hamsa يوم الجمعة 11 سبتمبر 2026 في Max Garden Halls" />
   <meta name="author" content="Zeyad & Hamsa" />
-  <meta name="keywords" content="engagement, invitation, Hamsa, Zeyad, Elena Hall, Cairo" />
+  <meta name="keywords" content="engagement, invitation, Hamsa, Zeyad, Max Garden, Alexandria" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Zeyad & Hamsa - Engagement Invitation" />
-  <meta property="og:description" content="دعوة لحضور حفل خطوبة Zeyad & Hamsa يوم السبت 20 يوليو 2026 في Elena Hall" />
+  <meta property="og:description"
+    content="دعوة لحضور حفل خطوبة Zeyad & Hamsa يوم الجمعة 11 سبتمبر 2026 في Max Garden Halls" />
   <meta property="og:image" content="og-image.png" />
   <meta property="og:type" content="website" />
 
@@ -28,6 +29,16 @@
 </head>
 
 <body>
+
+  <!-- ============================================================
+       LANGUAGE SWITCHER (fixed, always visible)
+  ============================================================ -->
+  <div class="lang-switcher-container">
+    <button id="langToggleBtn" class="lang-toggle-btn" aria-label="Toggle language">
+      <span class="lang-label-en">العربية</span>
+      <span class="lang-label-ar">English</span>
+    </button>
+  </div>
 
   <!-- ============================================================
        AUDIO ELEMENT
@@ -62,12 +73,22 @@
         </svg>
       </div>
 
-      <p class="hero-subtitle">You are cordially invited to the engagement of</p>
+      <p class="hero-subtitle">
+        <span class="t-en">You are cordially invited to the engagement of</span>
+        <span class="t-ar">نتشرف بدعوتكم لحضور حفل خطوبة</span>
+      </p>
 
       <h1 class="hero-names">
-        <span class="name-groom">Zeyad</span>
-        <span class="name-ampersand">&amp;</span>
-        <span class="name-bride">Hamsa</span>
+        <span class="t-en">
+          <span class="name-groom">Zeyad</span>
+          <span class="name-ampersand">&amp;</span>
+          <span class="name-bride">Hamsa</span>
+        </span>
+        <span class="t-ar" style="font-family:'Amiri',serif;font-weight:700;">
+          <span class="name-groom">زياد</span>
+          <span class="name-ampersand" style="font-family:'Amiri',serif;">و</span>
+          <span class="name-bride">همسه</span>
+        </span>
       </h1>
 
       <!-- Decorative ornament bottom -->
@@ -87,7 +108,8 @@
       </div>
 
       <button id="openInvitationBtn" class="btn-open-invitation" aria-label="Open Invitation">
-        <span class="btn-text">Open Invitation</span>
+        <span class="btn-text t-en">Open Invitation</span>
+        <span class="btn-text t-ar">افتح الدعوة</span>
         <span class="btn-icon">✦</span>
       </button>
     </div>
@@ -115,6 +137,8 @@
             </g>
           </svg>
         </div>
+
+        <!-- Arabic verse (shown in both, always RTL) -->
         <blockquote class="verse-text" lang="ar" dir="rtl">
           وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم
           مَّوَدَّةً وَرَحْمَةً
@@ -125,47 +149,95 @@
 
     <!-- ===================== COUPLE PORTRAIT ===================== -->
     <section id="portrait" class="portrait-section" aria-label="Couple Portrait">
-      <div class="section-inner">
-        <div class="portrait-frame-wrapper">
+      <div class="portrait-duo">
+
+        <!-- IMAGE — slides in from the right -->
+        <div class="portrait-img-col" id="portraitImgCol">
           <div class="portrait-frame">
             <div class="frame-corner frame-corner--tl" aria-hidden="true"></div>
             <div class="frame-corner frame-corner--tr" aria-hidden="true"></div>
             <div class="frame-corner frame-corner--bl" aria-hidden="true"></div>
             <div class="frame-corner frame-corner--br" aria-hidden="true"></div>
-            <img src="couple.png" alt="Zeyad and Hamsa - Engagement Portrait" class="portrait-img" loading="lazy" />
+            <img src="couple1.jpeg" alt="Zeyad and Hamsa - Engagement Portrait" class="portrait-img" loading="lazy" />
           </div>
         </div>
-        <div class="portrait-caption">
-          <span class="portrait-name">Zeyad</span>
-          <span class="portrait-amp">&amp;</span>
-          <span class="portrait-name">Hamsa</span>
+
+        <!-- TEXT — typewriter after image settles -->
+        <div class="portrait-text-col" id="portraitTextCol">
+          <div class="portrait-caption">
+            <span class="t-en">
+              <span class="portrait-name">Zeyad</span>
+              <span class="portrait-amp">&amp;</span>
+              <span class="portrait-name">Hamsa</span>
+            </span>
+            <span class="t-ar" style="font-family:'Amiri',serif;">
+              <span class="portrait-name">زياد</span>
+              <span class="portrait-amp">و</span>
+              <span class="portrait-name">همسه</span>
+            </span>
+          </div>
+
+          <p class="portrait-tagline" id="portraitTagline" aria-live="polite">
+            <span class="typewriter-en t-en"></span>
+            <span class="typewriter-ar t-ar"></span>
+            <span class="cursor-blink" aria-hidden="true">|</span>
+          </p>
+
+          <div class="portrait-ornament" aria-hidden="true">
+            <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" stroke="#c8a96e" stroke-width="0.7" opacity="0.7">
+                <line x1="0" y1="15" x2="70" y2="15" />
+                <line x1="130" y1="15" x2="200" y2="15" />
+                <path d="M70,15 Q85,4 100,15 Q115,26 130,15" />
+                <circle cx="100" cy="15" r="3" fill="#c8a96e" />
+              </g>
+            </svg>
+          </div>
         </div>
+
       </div>
     </section>
 
     <!-- ===================== SAVE THE DATE ===================== -->
     <section id="savethedate" class="savethedate-section" aria-label="Save The Date">
       <div class="section-inner">
-        <p class="section-tag">— Save The Date —</p>
-        <p class="std-wedding-of">The engagement of</p>
-        <h2 class="std-names">Zeyad <span class="std-amp">&amp;</span> Hamsa</h2>
+        <p class="section-tag">
+          <span class="t-en">— Save The Date —</span>
+          <span class="t-ar">— احفظ التاريخ —</span>
+        </p>
+        <p class="std-wedding-of">
+          <span class="t-en">The engagement of</span>
+          <span class="t-ar">حفل خطوبة</span>
+        </p>
+        <h2 class="std-names">
+          <span class="t-en">Zeyad <span class="std-amp">&amp;</span> Hamsa</span>
+          <span class="t-ar" style="font-family:'Amiri',serif;">زياد <span class="std-amp">و</span> همسه</span>
+        </h2>
 
-        <div class="std-date-block" role="time" datetime="2026-07-20T20:00">
+        <div class="std-date-block" role="time" datetime="2026-09-11T17:00" dir="ltr">
           <div class="std-date-part">
-            <span class="std-date-label">Saturday</span>
+            <span class="std-date-label t-en">Friday</span>
+            <span class="std-date-label t-ar">الجمعة</span>
           </div>
           <div class="std-date-divider" aria-hidden="true">|</div>
           <div class="std-date-part">
-            <span class="std-date-number">20</span>
+            <span class="std-date-number">11</span>
           </div>
           <div class="std-date-divider" aria-hidden="true">|</div>
           <div class="std-date-part">
-            <span class="std-date-label">July</span>
+            <span class="std-date-label t-en">September</span>
+            <span class="std-date-label t-ar">سبتمبر</span>
           </div>
         </div>
 
-        <p class="std-year">Two Thousand Twenty Six</p>
-        <p class="std-time">at Eight O'Clock in the Evening</p>
+        <p class="std-year">
+          <span class="t-en">Two Thousand Twenty Six</span>
+          <span class="t-ar">عام ألفين وستة وعشرين</span>
+        </p>
+        <p class="std-time">
+          <span class="t-en">at Five O'Clock in the Evening</span>
+          <span class="t-ar">في تمام الساعة الخامسة مساءً</span>
+        </p>
 
         <div class="std-ornament-line" aria-hidden="true">
           <span class="ornament-line-inner"></span>
@@ -178,34 +250,42 @@
     <!-- ===================== COUNTDOWN TIMER ===================== -->
     <section id="countdown" class="countdown-section" aria-label="Countdown Timer">
       <div class="section-inner">
-        <p class="countdown-title">Countdown to our big day</p>
+        <p class="countdown-title">
+          <span class="t-en">Countdown to our big day</span>
+          <span class="t-ar">العد التنازلي لليوم المنتظر</span>
+        </p>
 
-        <div class="countdown-grid" id="countdownGrid" role="timer"
+        <div class="countdown-grid" id="countdownGrid" role="timer" dir="ltr"
           aria-label="Days, Hours, Minutes, Seconds remaining">
           <div class="countdown-item">
-            <span class="countdown-number" id="cdDays">000</span>
-            <span class="countdown-label">Days</span>
+            <span class="countdown-number" id="cdDays">00</span>
+            <span class="countdown-label t-en">Days</span>
+            <span class="countdown-label t-ar">أيام</span>
           </div>
           <div class="countdown-sep" aria-hidden="true">:</div>
           <div class="countdown-item">
             <span class="countdown-number" id="cdHours">00</span>
-            <span class="countdown-label">Hours</span>
+            <span class="countdown-label t-en">Hours</span>
+            <span class="countdown-label t-ar">ساعات</span>
           </div>
           <div class="countdown-sep" aria-hidden="true">:</div>
           <div class="countdown-item">
             <span class="countdown-number" id="cdMinutes">00</span>
-            <span class="countdown-label">Minutes</span>
+            <span class="countdown-label t-en">Minutes</span>
+            <span class="countdown-label t-ar">دقائق</span>
           </div>
           <div class="countdown-sep" aria-hidden="true">:</div>
           <div class="countdown-item">
             <span class="countdown-number" id="cdSeconds">00</span>
-            <span class="countdown-label">Seconds</span>
+            <span class="countdown-label t-en">Seconds</span>
+            <span class="countdown-label t-ar">ثواني</span>
           </div>
         </div>
 
         <!-- Past date message -->
         <p class="countdown-past hidden" id="countdownPast">
-          ✦ We are engaged! Thank you for celebrating with us ✦
+          <span class="t-en">✦ We are engaged! Thank you for celebrating with us ✦</span>
+          <span class="t-ar">✦ تمت الخطوبة بحمد الله! شكراً لمشاركتنا فرحتنا ✦</span>
         </p>
       </div>
     </section>
@@ -213,7 +293,10 @@
     <!-- ===================== VENUE ===================== -->
     <section id="venue" class="venue-section" aria-label="Venue Details">
       <div class="section-inner">
-        <p class="section-tag">— Venue —</p>
+        <p class="section-tag">
+          <span class="t-en">— Venue —</span>
+          <span class="t-ar">— مكان الحفل —</span>
+        </p>
 
         <div class="venue-icon" aria-hidden="true">
           <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg" width="50">
@@ -234,18 +317,25 @@
           </svg>
         </div>
 
-        <h2 class="venue-name">Elena Hall Grand Ballroom</h2>
-        <p class="venue-address">123 Nile Corniche Road, Maadi, Cairo, Egypt</p>
+        <h2 class="venue-name">
+          <span class="t-en">Max Garden Halls</span>
+          <span class="t-ar">مجمع قاعات ماكس جاردن</span>
+        </h2>
+        <p class="venue-address">
+          <span class="t-en">Al-Max, opposite the Haras El Hodoud Club, Agami, Alexandria</span>
+          <span class="t-ar">الماكس، أمام نادي حرس الحدود، العجمي، الإسكندرية</span>
+        </p>
 
-        <a id="getDirectionsBtn" href="https://www.google.com/maps/search/123+Nile+Corniche+Road+Maadi+Cairo+Egypt"
-          target="_blank" rel="noopener noreferrer" class="btn-directions"
-          aria-label="Get Directions to Elena Hall on Google Maps">
+        <a id="getDirectionsBtn" href="https://maps.app.goo.gl/AX8c3uvQsdoPTrpZA?g_st=aw" target="_blank"
+          rel="noopener noreferrer" class="btn-directions"
+          aria-label="Get Directions to Max Garden Halls on Google Maps">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"
             aria-hidden="true">
             <path
               d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" />
           </svg>
-          Get Directions
+          <span class="t-en">Get Directions</span>
+          <span class="t-ar">الحصول على الاتجاهات</span>
         </a>
       </div>
     </section>
@@ -262,7 +352,10 @@
           </g>
         </svg>
       </div>
-      <p class="footer-text">© 2026 Zeyad &amp; Hamsa. Created with love.</p>
+      <p class="footer-text">
+        <span class="t-en">© 2026 Zeyad &amp; Hamsa. Created with love.</span>
+        <span class="t-ar">© ٢٠٢٦ زياد &amp; همسه. صُنع بكل حب.</span>
+      </p>
       <div class="footer-hearts" aria-hidden="true">♥</div>
     </footer>
 
