@@ -1036,13 +1036,29 @@ html[lang="ar"] .portrait-text-col {
   }
 
   .countdown-grid {
-    gap: 0.3rem;
+    flex-wrap: nowrap;
+    gap: 0.15rem;
+    justify-content: space-between;
+  }
+
+  .countdown-item {
+    min-width: unset;
+    flex: 1 1 0;
+  }
+
+  .countdown-number {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  .countdown-label {
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
   }
 
   .countdown-sep {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
   }
-
   .portrait-img {
     width: min(300px, 85vw);
     height: min(380px, 110vw);
