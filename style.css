@@ -1035,30 +1035,44 @@ html[lang="ar"] .portrait-text-col {
     font-size: 1.5rem;
   }
 
+  /* ---- Countdown: force single row on mobile ---- */
+  .countdown-section {
+    padding: 3.5rem 0.5rem; /* tighter horizontal padding */
+  }
+
   .countdown-grid {
     flex-wrap: nowrap;
-    gap: 0.15rem;
-    justify-content: space-between;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .countdown-item {
-    min-width: unset;
-    flex: 1 1 0;
+    min-width: 0;          /* clear the 70px+ desktop min-width */
+    flex: 0 1 auto;
+    padding: 0 1px;
   }
 
   .countdown-number {
-    font-size: clamp(1.5rem, 7vw, 2.2rem);
+    font-size: clamp(1.6rem, 8.5vw, 3rem);
+    letter-spacing: -0.03em;
   }
 
   .countdown-label {
-    font-size: 0.5rem;
-    letter-spacing: 0.15em;
+    font-size: clamp(0.38rem, 1.6vw, 0.55rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   .countdown-sep {
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
+    font-size: clamp(1rem, 5.5vw, 2rem);
+    margin-bottom: 1.4rem;
+    flex: 0 0 auto;
+    padding: 0;
   }
+
   .portrait-img {
     width: min(300px, 85vw);
     height: min(380px, 110vw);
